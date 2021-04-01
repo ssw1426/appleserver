@@ -27,9 +27,9 @@ async def on_message(message):
                 try:
                     msg = message.content[4:]
                     if message.author.id == 523745826791489547:
-                        embed = discord.Embed(colour=0x1DDB16, timestamp=message.created_at, title="최상단 제목")
-                        embed.add_field(name="제목", value=msg, inline=True)
-                        embed.set_footer(text=f"서버초대코드")
+                        embed = discord.Embed(colour=0x1DDB16, timestamp=message.created_at, title="[AppleㆍRP 공지사항]")
+                        embed.add_field(name="아래 내용 확인해주세요", value=msg, inline=True)
+                        embed.set_footer(text=f"https://discord.gg/EpGT7Y8xvG")
                         await i.send(embed=embed)
                 except:
                     pass
