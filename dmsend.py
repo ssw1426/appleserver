@@ -19,7 +19,7 @@ async def on_ready():
 #/dm {할말}로 전체DM 전송
 @client.event
 async def on_message(message):
-    if message.content.startswith('/dm'):
+    if message.content.startswith('!dm'):
         for i in message.guild.members:
             if i.bot == True:
                 pass
