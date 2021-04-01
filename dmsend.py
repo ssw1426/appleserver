@@ -26,7 +26,7 @@ async def on_message(message):
             else:
                 try:
                     msg = message.content[4:]
-                    if message.author.id == 523745826791489547:
+                    if message.author.id == 811889618697060362:
                         embed = discord.Embed(colour=0x1DDB16, timestamp=message.created_at, title="[AppleㆍRP 공지사항]")
                         embed.add_field(name="아래 내용 확인해주세요", value=msg, inline=True)
                         embed.set_footer(text=f"https://discord.gg/EpGT7Y8xvG")
