@@ -6,19 +6,20 @@
 import discord
 import asyncio
 import datetime
+import os
 
 client = discord.Client()
 
 @client.event
 async def on_ready():
     print("봇실행이 시작되었습니다(24시간 온라인).")
-    game = discord.Game('~하는 중 ex)봇만들기 하는 중')
+    game = discord.Game('디엠 받기')
     await client.change_presence(status=discord.Status.online, activity=game)
 
 #/dm {할말}로 전체DM 전송
 @client.event
 async def on_message(message):
-    if message.content.startswith('/dm'):
+    if message.content.startswith('!dm'):
         for i in message.guild.members:
             if i.bot == True:
                 pass
@@ -33,5 +34,5 @@ async def on_message(message):
                 except:
                     pass
 
-
-client.run('봇의 토큰을 넣어주세용')
+access_token = os.environ['BOT_TOKEN]
+client.run(access_token)
